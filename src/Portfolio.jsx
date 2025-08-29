@@ -161,8 +161,8 @@ export default function Portfolio() {
     <img
       src={avatarUrl}
       alt="Alberto Bollino"
-      width={200}
-      className="object-cover mb-6 md:mb-0"
+      width={250}
+      className="object-cover mb-0 md:position-absolute md:left-[75%]"
     />
     {/* Frasi */}
     <div className="">
