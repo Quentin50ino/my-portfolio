@@ -123,6 +123,53 @@ export default function Portfolio() {
 
   return (
     <div className="text-lg w-full bg-gray-950 text-white">
+      <div className="bg-icons">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    className="bg-icon"
+    style={{ left: "10%", top: "25%", animationName: "float-xy", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    className="bg-icon"
+    style={{ left: "10%", top: "5%", animationName: "float-xy", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    className="bg-icon"
+    style={{ left: "10%", top: "35%", animationName: "float-x", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    className="bg-icon"
+    style={{ left: "10%", top: "5%", animationName: "float-xy", animationDelay: "0s" }} />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+    className="bg-icon"
+    style={{ left: "40%", top: "10%", animationName: "float-y", animationDelay: "0s" }} />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+    className="bg-icon"
+    style={{ left: "70%", top: "20%", animationName: "float-xy", animationDelay: "0s" }} />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    className="bg-icon"
+    style={{ left: "20%", top: "60%", animationName: "float-yx", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    className="bg-icon"
+    style={{ left: "20%", top: "70%", animationName: "float-yx", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+    className="bg-icon"
+    style={{ left: "40%", top: "80%", animationName: "float-yx", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+    className="bg-icon"
+    style={{ left: "20%", top: "10%", animationName: "float-yx", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+    className="bg-icon"
+    style={{ left: "20%", top: "20%", animationName: "float-yx", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+    className="bg-icon"
+    style={{ left: "20%", top: "60%", animationName: "float-yx", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+    className="bg-icon"
+    style={{ left: "20%", top: "30%", animationName: "float-yx", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+    className="bg-icon"
+    style={{ left: "20%", top: "40%", animationName: "float-xy", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+    className="bg-icon"
+    style={{ left: "20%", top: "60%", animationName: "float-yx", animationDelay: "0s" }} />
+</div>
       {/* Navbar responsive */}
       <header className="bg-gray-900 py-6 px-10 flex justify-between items-center sticky top-0 z-50 shadow-md">
         <div className="text-xl font-bold">Alberto Bollino</div>
