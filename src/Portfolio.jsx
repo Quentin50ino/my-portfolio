@@ -137,9 +137,9 @@ export default function Portfolio() {
       <footer id="contact" className="bg-gray-800 py-10 mt-16 text-center w-full">
         <h2 className="text-3xl font-semibold mb-6">Contact</h2>
         <div className="flex justify-center gap-8">
-          <a href="mailto:alberto@email.com" aria-label="Email"><Mail className="w-8 h-8 hover:text-gray-400" /></a>
-          <a href="https://www.linkedin.com/in/alberto" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin className="w-8 h-8 hover:text-blue-400" /></a>
-          <a href="https://github.com/alberto" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github className="w-8 h-8 hover:text-white" /></a>
+          <a href="mailto:alberto.bollino@outlook.it" aria-label="Email"><Mail className="w-8 h-8 hover:text-gray-400" /></a>
+          <a href="https://www.linkedin.com/in/alberto-bollino-5298b0201/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin className="w-8 h-8 hover:text-blue-400" /></a>
+          <a href="https://github.com/Quentin50ino" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github className="w-8 h-8 hover:text-white" /></a>
         </div>
       </footer>
     </div>
