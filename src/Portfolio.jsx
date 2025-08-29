@@ -7,7 +7,7 @@ import { ReactTyped } from "react-typed";
 import { Menu } from "lucide-react";
 import './App.css';
 
-const avatarUrl = "../src/assets/avatar.png";
+const avatarUrl = "/assets/avatar.png";
 
 const colabIcon = (
   <img
