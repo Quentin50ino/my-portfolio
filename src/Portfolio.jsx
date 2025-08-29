@@ -19,14 +19,15 @@ const education = [
 ];
 
 const projects = [
-  { title: "Interior Designer Portfolio", link: "#", description: "Portfolio website built and maintained for an interior designer." },
-  { title: "Florence Tourism Office Website", link: "#", description: "Informative portal for the Florence tourism office." },
-  { title: "Spotify Playlist Creator", link: "#", description: "App integrating Spotify API to generate custom playlists." },
-  { title: "DOA Estimation with MATLAB", link: "#", description: "Direction of Arrival analysis of audio files using MATLAB." },
-  { title: "AI Sound Detection", link: "#", description: "Neural network for recognizing vehicle sounds (IDMT-traffic dataset)." },
-  { title: "Rhythm Wheel Web App", link: "#", description: "Create musical rhythms via interactive visual interface." },
-  { title: "Auto Wah Audio Plugin", link: "#", description: "JUCE-based plugin replicating the Auto Wah audio effect." },
-  { title: "Chordophone Champions", link: "#", description: "Guitar Hero-style game using phone gyroscope, built with Supercollider and Processing." },
+  { title: "Interior Designer Portfolio", link: "https://github.com/Quentin50ino/portfolio-chiara/tree/master", description: "Portfolio website built and maintained for an interior designer.", hostedWebsite: "https://chiara-zeloni-portfolio.web.app/" },
+  { title: "Florence Tourism Office Website", link: "https://github.com/Quentin50ino/hyp-project-21-22", description: "Informative portal for the Florence tourism office.", hostedWebsite: "https://yes-florence-client.onrender.com/" },
+  { title: "Rhythm Wheel Web App", link: "https://github.com/mazamin7/rhythm_wheel", description: "Create musical rhythms via interactive visual interface.", hostedWebsite: "https://rythm-wheel.web.app/#canvas" },
+  { title: "Spotify Playlist Creator", link: "https://github.com/Quentin50ino/Spotify/tree/master", description: "App integrating Spotify API to generate custom playlists.", hostedWebsite: "https://spotify-create-playlist.web.app/" },
+  { title: "DOA Estimation with MATLAB", link: "https://github.com/Quentin50ino/DOA-Estimation-MATLAB", description: "Direction of Arrival analysis of audio files using MATLAB.", hostedWebsite: null },
+  { title: "AI Sound Detection", link: "https://colab.research.google.com/drive/1ILHcoOvno52jwNawqpL_AiJuIzmhoEZX?usp=sharing", description: "Neural network for recognizing vehicle sounds (IDMT-traffic dataset).", hostedWebsite: null },
+  { title: "Auto Wah Audio Plugin", link: "https://github.com/mazamin7/YetAnotherAutoWah", description: "JUCE-based plugin replicating the Auto Wah audio effect.", hostedWebsite: null },
+  { title: "Chordophone Champions", link: "https://github.com/mazamin7/Chordophone-Champion", description: "Guitar Hero-style game using phone gyroscope, built with Supercollider and Processing.", hostedWebsite: null },
+  {title: "FM Synth", link: "https://github.com/mazamin7/FM-Synth", description: "A simple software implementing FM synthesis, built with Supercollider.", hostedWebsite: null},
 ];
 
 const technologies = [
@@ -50,7 +51,8 @@ const technologies = [
 export default function Portfolio() {
   return (
     <div className="text-lg w-full bg-gray-950 text-white">
-      <header className="bg-gray-900 py-6 px-10 flex justify-center items-center sticky top-0 z-50 shadow-md">
+      {/*I dont like the header for now*/}
+      {/*<header className="bg-gray-900 py-6 px-10 flex justify-center items-center sticky top-0 z-50 shadow-md">
         <nav className="space-x-20 text-white text-lg">
           <a href="#education" className="hover:underline">Education</a>
           <a href="#experience" className="hover:underline">Work</a>
@@ -58,11 +60,11 @@ export default function Portfolio() {
           <a href="#technologies" className="hover:underline">Technologies</a>
           <a href="#contact" className="hover:underline">Contact</a>
         </nav>
-      </header>
+      </header>*/}
 
       <main className="w-full">
         <section className="bg-gray-800 py-20 px-10 text-center">
-          <h1 className="text-6xl font-bold my-20">
+          <h1 className="text-3xl md:text-6xl font-bold my-20">
             <ReactTyped
               strings={["Hi, I'm Alberto Bollino!", "I am a Software Engineer...", "I am a Web Developer...", "I am an Audio Engineer...", "I am a Tech Enthusiast."]}
               typeSpeed={50}
@@ -89,7 +91,7 @@ export default function Portfolio() {
           <div className="border-l-4 border-gray-400 ml-6 relative">
             {experiences.map((exp, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: i * 0.15 }} viewport={{ once: true }} className="mb-10 pl-6 relative">
-                <div className="absolute w-4 h-4 bg-gray-400 rounded-full -left-2 top-2.5"></div>
+                <div className="absolute w-4 h-4 bg-gray-400 rounded-full -left-2.5 top-2.5"></div>
                 <h3 className="text-2xl font-bold">{exp.title} @ {exp.company}</h3>
                 <p>{exp.duration} | {exp.location}</p>
                 <p className="mt-2">{exp.description}</p>
@@ -103,9 +105,15 @@ export default function Portfolio() {
             <Card.Body className="p-6 flex flex-col justify-between h-full">
               <h3 className="text-2xl font-semibold mb-2">{proj.title}</h3>
               <p className="mb-4">{proj.description}</p>
-              <Button variant="outline" className="border-gray-400 text-white hover:bg-gray-700" asChild>
-                <a href={proj.link} target="_blank" rel="noopener noreferrer">Visit</a>
+              <Button variant="outline" className="border-gray-400 text-white hover:bg-gray-700 flex flex-row justify-center items-center" asChild>
+                <a href={proj.link} target="_blank" rel="noopener noreferrer">GitHub </a>
+                <Github className="w-4 h-4 hover:text-white ml-2" />
               </Button>
+              {proj.hostedWebsite && 
+              <Button variant="outline" className="mt-2 border-gray-400 text-white hover:bg-gray-700 flex flex-row justify-center items-center" asChild>
+                <a href={proj.hostedWebsite} target="_blank" rel="noopener noreferrer">Hosted Website</a>
+                <Github className="w-4 h-4 hover:text-white ml-2" />
+              </Button>}
             </Card.Body>
           </Card>
         )} />
