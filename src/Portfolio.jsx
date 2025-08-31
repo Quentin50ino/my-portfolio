@@ -243,7 +243,7 @@ export default function Portfolio() {
   </div>
 </section>
 
-        <section id="about" className="py-16 px-10 bg-gray-900 w-full">
+        <section id="about" className="py-16 md:px-10 px-4 bg-gray-900 w-full">
           <motion.h2 className="text-4xl font-semibold mb-8 text-center"
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }}>About Me</motion.h2>
           <motion.div className="max-w-2xl mx-auto text-center text-lg text-gray-200" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
@@ -256,7 +256,7 @@ export default function Portfolio() {
         </section>
 
         <section id="education" title="Education" items={education} 
-          className="flex flex-column items-center bg-gray-800 py-16 px-10 w-full gap-6">
+          className="flex flex-column items-center bg-gray-800 py-16 md:px-10 px-4 w-full gap-6">
             <motion.h2 className="text-4xl font-semibold mb-8 text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
         Education
       </motion.h2>
@@ -279,7 +279,7 @@ export default function Portfolio() {
         ))}
         </section>
 
-        <section id="experience" className="py-16 px-4 md:px-10 bg-gray-800 w-full">
+        <section id="experience" className="py-16 px-10 bg-gray-800 w-full">
           <motion.h2 className="text-4xl font-semibold mb-8 text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
             Work Experience
           </motion.h2>
