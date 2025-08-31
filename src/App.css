@@ -1,3 +1,8 @@
+/* Ruota la card quando ha la classe flipped */
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
 #root {
   text-align: center;
 }
@@ -37,7 +42,7 @@
 .bg-icon {
   position: absolute;
   width: 48px;
-  opacity: 0.15;
+  opacity: 0.2;
   /* Ogni icona avrà una animazione diversa */
   animation-duration: 12s;
   animation-iteration-count: infinite;

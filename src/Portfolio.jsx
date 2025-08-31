@@ -1,3 +1,4 @@
+// Icone tecnologie usate nei progetti
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -25,9 +26,10 @@ const experiences = [
     duration: "May 2024 - Present",
     location: "Florence, Italy",
     description: "Development and maintenance of advanced medical software as part of the R&D team.",
-    logo: "https://www.ascom.com/favicon.ico",
+    logo: "https://yt3.googleusercontent.com/ytc/AIdro_mRCdUCB1m-OGujSGutSvcXsXvD0t3Mzq7m78eOZeyJ51s=s900-c-k-c0x00ffffff-no-rj",
     info: "Ascom is a global solutions provider focused on healthcare ICT and mobile workflow solutions.",
-    website: "https://www.ascom.com/"
+    website: "https://www.ascom.com/",
+    isFlipped: false
   },
   {
     title: "Software Engineer",
@@ -35,9 +37,10 @@ const experiences = [
     duration: "Nov 2022 - May 2024",
     location: "Turin, Italy",
     description: "Web and mobile software solutions development for business operations.",
-    logo: "https://www.enel.com/favicon.ico",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI1RyRInwJRuFRqiXqKT7C8mVlEXMYDcmLkw&s",
     info: "Enel is a multinational energy company and one of the world's leading integrated electricity and gas operators.",
-    website: "https://www.enel.com/"
+    website: "https://www.enel.com/",
+    isFlipped: false
   },
   {
     title: "Application Development Associate",
@@ -45,9 +48,10 @@ const experiences = [
     duration: "Apr 2022 - Nov 2022",
     location: "Turin, Italy",
     description: "Agile team collaboration on web projects in the automotive sector.",
-    logo: "https://www.accenture.com/favicon.ico",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ercDncGsEV9NkGdp78EyagH6U3ZFKiLyfQ&s",
     info: "Accenture is a global professional services company with leading capabilities in digital, cloud and security.",
-    website: "https://www.accenture.com/"
+    website: "https://www.accenture.com/",
+    isFlipped: false
   },
   {
     title: "Web Development Intern",
@@ -55,9 +59,10 @@ const experiences = [
     duration: "Jan 2021 - Dec 2021",
     location: "Turin, Italy",
     description: "Developed web applications from scratch in a team of five.",
-    logo: "https://static.wixstatic.com/media/9cc025_0ab3b3121b3449b5b7d2a3c4c65f1cd6~mv2.png/v1/fill/w_95,h_74,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo-Cesin-colore%20copia%203.png",
+    logo: "https://static.wixstatic.com/media/9cc025_0ab3b3121b3449b5b7d2a3c4c65f1cd6%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/9cc025_0ab3b3121b3449b5b7d2a3c4c65f1cd6%7Emv2.png",
     info: "CESIN GROUP specializes in industrial automation and engineering solutions.",
-    website: "https://www.cesingroup.it/"
+    website: "https://www.cesingroup.it/",
+    isFlipped: false
   },
 ];
 
@@ -67,15 +72,15 @@ const education = [
 ];
 
 const projects = [
-  { title: "Interior Designer Portfolio", link: "https://github.com/Quentin50ino/portfolio-chiara/tree/master", description: "Portfolio website built and maintained for an interior designer.", hostedWebsite: "https://chiara-zeloni-portfolio.web.app/", isColab: false },
-  { title: "Florence Tourism Office Website", link: "https://github.com/Quentin50ino/hyp-project-21-22", description: "Informative portal for the Florence tourism office.", hostedWebsite: "https://yes-florence-client.onrender.com/", isColab: false },
-  { title: "Rhythm Wheel Web App", link: "https://github.com/mazamin7/rhythm_wheel", description: "Create musical rhythms via interactive visual interface.", hostedWebsite: "https://rythm-wheel.web.app/#canvas", isColab: false },
-  { title: "Spotify Playlist Creator", link: "https://github.com/Quentin50ino/Spotify/tree/master", description: "App integrating Spotify API to generate custom playlists.", hostedWebsite: "https://spotify-create-playlist.web.app/", isColab: false },
-  { title: "DOA Estimation with MATLAB", link: "https://github.com/Quentin50ino/DOA-Estimation-MATLAB", description: "Direction of Arrival analysis of audio files using MATLAB.", hostedWebsite: null, isColab: false },
-  { title: "AI Sound Detection", link: "https://colab.research.google.com/drive/1ILHcoOvno52jwNawqpL_AiJuIzmhoEZX?usp=sharing", description: "Neural network for recognizing vehicle sounds (IDMT-traffic dataset).", hostedWebsite: null, isColab: true },
-  { title: "Auto Wah Audio Plugin", link: "https://github.com/mazamin7/YetAnotherAutoWah", description: "JUCE-based plugin replicating the Auto Wah audio effect.", hostedWebsite: null, isColab: false },
-  { title: "Chordophone Champions", link: "https://github.com/mazamin7/Chordophone-Champion", description: "Guitar Hero-style game using phone gyroscope, built with Supercollider and Processing.", hostedWebsite: null, isColab: false},
-  {title: "FM Synth", link: "https://github.com/mazamin7/FM-Synth", description: "A simple software implementing FM synthesis, built with Supercollider.", hostedWebsite: null, isColab: false},
+  { title: "Interior Designer Portfolio", link: "https://github.com/Quentin50ino/portfolio-chiara/tree/master", description: "Portfolio website built and maintained for an interior designer.", hostedWebsite: "https://chiara-zeloni-portfolio.web.app/", isColab: false, technologies: ["React", "Firebase"], type: "Business" },
+  { title: "Florence Tourism Office Website", link: "https://github.com/Quentin50ino/hyp-project-21-22", description: "Informative portal for the Florence tourism office.", hostedWebsite: "https://yes-florence-client.onrender.com/", isColab: false, technologies: ["Nuxt", "Vue", "Node.js", "Sequilize", "Postgres", "Render Cloud"], type: "University project" },
+  { title: "Rhythm Wheel Web App", link: "https://github.com/mazamin7/rhythm_wheel", description: "Create musical rhythms via interactive visual interface.", hostedWebsite: "https://rythm-wheel.web.app/#canvas", isColab: false, technologies: ["Vue", "Firebase", "Firestore", "NoSql Database"], type: "University project" },
+  { title: "Spotify Playlist Creator", link: "https://github.com/Quentin50ino/Spotify/tree/master", description: "App integrating Spotify API to generate custom playlists.", hostedWebsite: "https://spotify-create-playlist.web.app/", isColab: false, technologies: ["React", "Spotify API"], type: "Personal" },
+  { title: "DOA Estimation with MATLAB", link: "https://github.com/Quentin50ino/DOA-Estimation-MATLAB", description: "Direction of Arrival analysis of audio files using MATLAB.", hostedWebsite: null, isColab: false, technologies: ["MATLAB"], type: "University project" },
+  { title: "AI Sound Detection", link: "https://colab.research.google.com/drive/1ILHcoOvno52jwNawqpL_AiJuIzmhoEZX?usp=sharing", description: "Neural network for recognizing vehicle sounds (IDMT-traffic dataset).", hostedWebsite: null, isColab: true, technologies: ["Python", "Artificial Intelligence", "Machine Learning", "CNN"], type: "University project" },
+  { title: "Auto Wah Audio Plugin", link: "https://github.com/mazamin7/YetAnotherAutoWah", description: "JUCE-based plugin replicating the Auto Wah audio effect.", hostedWebsite: null, isColab: false, technologies: ["JUCE", "C++"], type: "University project" },
+  { title: "Chordophone Champions", link: "https://github.com/mazamin7/Chordophone-Champion", description: "Guitar Hero-style game using phone gyroscope, built with Supercollider and Processing.", hostedWebsite: null, isColab: false, technologies: ["Supercollider", "Processing"], type: "University project" },
+  { title: "FM Synth", link: "https://github.com/mazamin7/FM-Synth", description: "A simple software implementing FM synthesis, built with Supercollider.", hostedWebsite: null, isColab: false, technologies: ["Supercollider"], type: "University project" },
 ];
 
 const technologies = [
@@ -93,7 +98,7 @@ const technologies = [
   { name: "SQL Server", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg", description: "Relational database by Microsoft." },
   { name: "Postgres", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", description: "Advanced open-source relational database." },
   { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", description: "Multi-paradigm, high-level language." },
-  { name: "MATLAB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg", description: "Numerical computing and simulation environment." },
+  { name: "MATLAB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg", description: "Numerical computing and simulation environment." }
 ];
 
 const heroStrings = [
@@ -109,6 +114,7 @@ export default function Portfolio() {
   const [mobileIndex, setMobileIndex] = React.useState(0);
   const [phraseKey, setPhraseKey] = React.useState(0);
   const [navOpen, setNavOpen] = React.useState(false);
+  const [flippedStates, setFlippedStates] = React.useState(experiences.map(() => false));
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -127,15 +133,15 @@ export default function Portfolio() {
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
     className="bg-icon"
     style={{ left: "10%", top: "25%", animationName: "float-xy", animationDelay: "0s" }} />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
     className="bg-icon"
     style={{ left: "10%", top: "5%", animationName: "float-xy", animationDelay: "0s" }} />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
     className="bg-icon"
     style={{ left: "10%", top: "35%", animationName: "float-x", animationDelay: "0s" }} />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
     className="bg-icon"
-    style={{ left: "10%", top: "5%", animationName: "float-xy", animationDelay: "0s" }} />
+    style={{ left: "18%", top: "55%", animationName: "float-xy", animationDelay: "0s" }} />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
     className="bg-icon"
     style={{ left: "40%", top: "10%", animationName: "float-y", animationDelay: "0s" }} />
@@ -153,17 +159,17 @@ export default function Portfolio() {
     style={{ left: "40%", top: "80%", animationName: "float-yx", animationDelay: "0s" }} />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
     className="bg-icon"
-    style={{ left: "20%", top: "10%", animationName: "float-yx", animationDelay: "0s" }} />
+    style={{ left: "20%", top: "10%", animationName: "float-y", animationDelay: "0s" }} />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
     className="bg-icon"
     style={{ left: "20%", top: "20%", animationName: "float-yx", animationDelay: "0s" }} />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg"
     className="bg-icon"
-    style={{ left: "20%", top: "60%", animationName: "float-yx", animationDelay: "0s" }} />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+    style={{ left: "20%", top: "60%", animationName: "float-x", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
     className="bg-icon"
-    style={{ left: "20%", top: "30%", animationName: "float-yx", animationDelay: "0s" }} />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+    style={{ left: "30%", top: "30%", animationName: "float-yx", animationDelay: "0s" }} />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
     className="bg-icon"
     style={{ left: "20%", top: "40%", animationName: "float-xy", animationDelay: "0s" }} />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
@@ -237,6 +243,18 @@ export default function Portfolio() {
   </div>
 </section>
 
+        <section id="about" className="py-16 px-10 bg-gray-900 w-full">
+          <motion.h2 className="text-4xl font-semibold mb-8 text-center"
+          initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }}>About Me</motion.h2>
+          <motion.div className="max-w-2xl mx-auto text-center text-lg text-gray-200" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
+            <p>
+              Hi all, I'm Alberto Bollino. <br></br>
+              I am a Software Engineer with a passion for creating innovative solutions. <br></br> 
+              I love dedicating myself to improving my coding skills through personal projects, while nurturing my passion for travel, cinema, art, personal finance, and music, as a blues and jazz guitarist, music has a special place in everything I do.
+            </p>
+          </motion.div>
+        </section>
+
         <Section id="education" title="Education" bgColor="bg-gray-700" items={education} renderItem={(edu, i) => (
           <Card className="bg-gray-800 text-white h-full">
             <Card.Body className="p-6 flex flex-col justify-between h-full">
@@ -254,50 +272,113 @@ export default function Portfolio() {
           <div className="border-gray-400 ml-6 relative">
             {experiences.map((exp, i) => (
               <motion.div
-        key={i}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: i * 0.15 }}
-        viewport={{ once: true }}
-        className="perspective-1000 mb-10"
-      >
-        <div className="group w-full h-56">
-          <div className="flip-card-inner w-full h-full relative">
-            {/* Front */}
-            <div className="flip-card-front bg-gray-800 text-white rounded shadow flex flex-col justify-center p-6 h-full">
-              <h3 className="text-xl md:text-2xl font-bold">{exp.title} @ {exp.company}</h3>
-              <p>{exp.duration} | {exp.location}</p>
-              <p className="mt-2">{exp.description}</p>
-            </div>
-            {/* Back */}
-            <div className="flip-card-back bg-gray-900 text-white rounded shadow p-6 flex flex-col items-center justify-center h-full">
-              <img src={exp.logo} alt={exp.company} className="w-18 h-18 mb-2 rounded-full bg-white" />
-              <p className="mb-2 text-center text-md">{exp.info}</p>
-              <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline text-md">
-                Learn more
-              </a>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="perspective-1000 mb-10"
+              >
+                <div className="w-full md:h-64 h-80">
+                  <div className={`flip-card-inner w-full h-full relative${flippedStates[i] ? ' flipped' : ''}`}
+                    >
+                    {/* Front */}
+                    <div 
+                      className="flip-card-front bg-gray-800 text-white rounded shadow flex flex-col justify-center p-6 h-full relative"
+                    >
+                      <h3 className="text-xl md:text-2xl font-bold">{exp.title} @ {exp.company}</h3>
+                      <p>{exp.duration} | {exp.location}</p>
+                      <p className="mt-2">{exp.description}</p>
+                      <div className="mt-4 border-t border-gray-700 w-full">
+                      <button
+                        className="absolute bottom-4 right-4 bg-gray-700 rounded-full p-2 hover:bg-gray-500 transition "
+                        onClick={() => {
+                          const newFlippedState = [...flippedStates];
+                          newFlippedState[i] = true;
+                          setFlippedStates(newFlippedState);
+                        }}
+                        aria-label="Gira la card"
+                        style={{ zIndex: 2 }}
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 rotate-180">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                      </button>
+                      </div>
+                    </div>
+                    {/* Back */}
+                    <div 
+                      className="flip-card-back bg-gray-900 text-white rounded shadow p-6 flex flex-col items-center justify-center h-full relative"
+                    >
+                      <img src={exp.logo} alt={exp.company} height={72} width={72} className="w-18 h-18 mb-2 rounded-full bg-white" />
+                      <p className="mb-2 text-center text-md">{exp.info}</p>
+                      <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline text-md mb-4">
+                        Learn more
+                      </a>
+                      <div className="mb-12 border-t border-gray-700 w-full">
+                      <button
+                        className="absolute bottom-4 right-4 bg-gray-700 rounded-full p-2 hover:bg-gray-500 transition"
+                        onClick={() => {
+                          const newFlippedState = [...flippedStates];
+                          newFlippedState[i] = false;
+                          setFlippedStates(newFlippedState);
+                        }}
+                        aria-label="Torna indietro"
+                        style={{ zIndex: 2 }}
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
         <Section id="projects" title="Projects" bgColor="bg-gray-800" items={projects} renderItem={(proj, i) => (
-          <Card className="bg-gray-900 text-white h-full">
-            <Card.Body className="p-6 flex flex-col justify-between h-full">
-              <h3 className="text-2xl font-semibold mb-2">{proj.title}</h3>
-              <p className="mb-4">{proj.description}</p>
-              <Button variant="outline" className="border-gray-400 text-white hover:bg-gray-700 flex flex-row justify-center items-center" asChild>
-                <a href={proj.link} target="_blank" rel="noopener noreferrer">{proj.isColab ? "Colab" : "GitHub"} </a>
-                {proj.isColab ? <span>{colabIcon}</span> : <Github className="w-4 h-4 hover:text-white ml-2" />}
-              </Button>
-              {proj.hostedWebsite && 
-              <Button variant="outline" className="mt-2 border-gray-400 text-white hover:bg-gray-700 flex flex-row justify-center items-center" asChild>
-                <a href={proj.hostedWebsite} target="_blank" rel="noopener noreferrer">Hosted Website</a>
-                <Globe className="w-4 h-4 hover:text-white ml-2" />
-              </Button>}
+          <Card className="bg-gray-900 text-white h-full relative">
+            <Card.Body className="p-6 flex flex-col h-full text-xl">
+              <div className="absolute top-4 right-4 flex gap-2 z-10">
+                {proj.isColab ? (
+                  <a href={proj.link} target="_blank" rel="noopener noreferrer" className="rounded-full bg-yellow-100 hover:bg-yellow-200 p-2 transition" title="Open in Colab">
+                    <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Colab" className="w-5 h-5" />
+                  </a>
+                ) : (
+                  <a href={proj.link} target="_blank" rel="noopener noreferrer" className="rounded-full bg-gray-800 hover:bg-gray-700 p-2 transition" title="View on GitHub">
+                    <Github className="w-5 h-5" />
+                  </a>
+                )}
+                {proj.hostedWebsite && (
+                  <a href={proj.hostedWebsite} target="_blank" rel="noopener noreferrer" className="rounded-full bg-blue-100 hover:bg-blue-200 p-2 transition" title="Open Website">
+                    <Globe className="w-5 h-5 text-blue-700" />
+                  </a>
+                )}
+              </div>
+              <h3 className="text-2xl md:mt-0 mt-8 font-semibold mb-2 text-center w-full flex justify-center items-center relative">{proj.title}</h3>
+              <div className="flex flex-col flex-1 justify-between mb-4 mt-4 gap-2">
+                <div>
+                  <span className="text-sm font-bold text-gray-400 uppercase tracking-wider">Type:</span>
+                  <span className="ml-2 text-sm text-gray-200 font-bold">{proj.type}</span>
+                </div>
+                <div>
+                  <span className="text-md text-gray-200">{proj.description}</span>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-4 mt-6 pt-4 border-t border-gray-700 items-center justify-center">
+                {proj.technologies.map((tech, idx) => {
+                  return (
+                    <div key={idx} className="relative group flex items-center justify-center">
+                      <span className="transition-opacity bottom-full bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded shadow z-20 whitespace-nowrap pointer-events-none">
+                        {tech}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </Card.Body>
           </Card>
         )} />
