@@ -255,67 +255,82 @@ export default function Portfolio() {
           </motion.div>
         </section>
 
-        <Section id="education" title="Education" bgColor="bg-gray-700" items={education} renderItem={(edu, i) => (
-          <Card className="bg-gray-800 text-white h-full">
+        <section id="education" title="Education" items={education} 
+          className="flex flex-column items-center bg-gray-800 py-16 px-10 w-full gap-6">
+            <motion.h2 className="text-4xl font-semibold mb-8 text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
+        Education
+      </motion.h2>
+        {education.map((edu, i) => (
+          <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: i * 0.15 }}
+                className="h-full md:w-[60%] w-full"
+              >
+          <Card className="bg-gray-900 text-white h-full">
             <Card.Body className="p-6 flex flex-col justify-between h-full">
               <h3 className="text-2xl font-bold">{edu.title}</h3>
               <p>{edu.school} - {edu.track}</p>
               <p>{edu.location}</p>
             </Card.Body>
           </Card>
-        )} />
+          </motion.div>
+        ))}
+        </section>
 
-        <section id="experience" className="py-16 px-4 md:px-10 bg-gray-600 w-full">
+        <section id="experience" className="py-16 px-4 md:px-10 bg-gray-800 w-full">
           <motion.h2 className="text-4xl font-semibold mb-8 text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
             Work Experience
           </motion.h2>
-          <div className="border-gray-400 ml-6 relative">
+          <div className="border-gray-400 relative flex justify-center flex-wrap">
             {experiences.map((exp, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: i * 0.15 }}
-                viewport={{ once: true }}
-                className="perspective-1000 mb-10"
+                viewport={{ once: false }}
+                className="perspective-1000 mb-3 flex justify-center md:w-[60%] w-full"
               >
                 <div className="w-full md:h-64 h-80">
                   <div className={`flip-card-inner w-full h-full relative${flippedStates[i] ? ' flipped' : ''}`}
                     >
                     {/* Front */}
                     <div 
-                      className="flip-card-front bg-gray-800 text-white rounded shadow flex flex-col justify-center p-6 h-full relative"
-                    >
-                      <h3 className="text-xl md:text-2xl font-bold">{exp.title} @ {exp.company}</h3>
-                      <p>{exp.duration} | {exp.location}</p>
-                      <p className="mt-2">{exp.description}</p>
-                      <div className="mt-4 border-t border-gray-700 w-full">
-                      <button
-                        className="absolute bottom-4 right-4 bg-gray-700 rounded-full p-2 hover:bg-gray-500 transition "
-                        onClick={() => {
-                          const newFlippedState = [...flippedStates];
-                          newFlippedState[i] = true;
-                          setFlippedStates(newFlippedState);
-                        }}
-                        aria-label="Gira la card"
-                        style={{ zIndex: 2 }}
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 rotate-180">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                        </svg>
-                      </button>
-                      </div>
-                    </div>
+  className="flip-card-front bg-gray-900 text-white rounded shadow flex flex-col justify-center p-6 h-full relative"
+>
+  {/* Data in alto a sinistra */}
+  <span className="absolute top-4 left-4 text-sm font-semibold text-gray-300 bg-gray-700 px-2 py-1 rounded">
+    {exp.duration}
+  </span>
+  <img src={exp.logo} alt={exp.company} height={72} width={72} className="w-18 h-18 mb-4 rounded-full bg-white" />
+  <h3 className="text-xl md:text-2xl font-bold">{exp.title} @ {exp.company}</h3>
+  <p>{exp.location}</p>
+  <button
+    className="absolute bottom-4 right-4 bg-gray-700 rounded-full p-2 hover:bg-gray-500 transition "
+    onClick={() => {
+      const newFlippedState = [...flippedStates];
+      newFlippedState[i] = true;
+      setFlippedStates(newFlippedState);
+    }}
+    aria-label="Gira la card"
+    style={{ zIndex: 2 }}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 rotate-180">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+    </svg>
+  </button>
+</div>
                     {/* Back */}
                     <div 
                       className="flip-card-back bg-gray-900 text-white rounded shadow p-6 flex flex-col items-center justify-center h-full relative"
                     >
-                      <img src={exp.logo} alt={exp.company} height={72} width={72} className="w-18 h-18 mb-2 rounded-full bg-white" />
                       <p className="mb-2 text-center text-md">{exp.info}</p>
-                      <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline text-md mb-4">
+                      <p className="mt-2">{exp.description}</p>
+                      <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline mt-2 text-md mb-4">
                         Learn more
                       </a>
-                      <div className="mb-12 border-t border-gray-700 w-full">
                       <button
                         className="absolute bottom-4 right-4 bg-gray-700 rounded-full p-2 hover:bg-gray-500 transition"
                         onClick={() => {
@@ -330,7 +345,6 @@ export default function Portfolio() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                         </svg>
                       </button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -368,7 +382,7 @@ export default function Portfolio() {
                   <span className="text-md text-gray-200">{proj.description}</span>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-4 mt-6 pt-4 border-t border-gray-700 items-center justify-center">
+              <div className="flex flex-wrap gap-2 mt-6 pt-4 border-t border-gray-700 items-center justify-center">
                 {proj.technologies.map((tech, idx) => {
                   return (
                     <div key={idx} className="relative group flex items-center justify-center">
@@ -383,7 +397,7 @@ export default function Portfolio() {
           </Card>
         )} />
 
-       <section id="technologies" className="py-16 px-10 bg-gray-700 w-full">
+       <section id="technologies" className="py-16 px-10 bg-gray-800 w-full">
       <h2 className="text-4xl font-semibold mb-8 text-center">Technologies</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-center">
         {technologies.map((tech, i) => (
@@ -420,7 +434,7 @@ export default function Portfolio() {
 }
 
 
-function Section({ id, title, bgColor, items, renderItem }) {
+function Section({ id, title, bgColor, items, renderItem, grid }) {
   return (
     <section id={id} className={`py-16 px-10 w-full ${bgColor}`}>
       <motion.h2 className="text-4xl font-semibold mb-8 text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
@@ -428,7 +442,9 @@ function Section({ id, title, bgColor, items, renderItem }) {
       </motion.h2>
       <div className="grid md:grid-cols-2 gap-6">
         {items.map((item, i) => (
-          <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: i * 0.15 }} viewport={{ once: true }}>
+          <motion.div 
+            key={i} 
+            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: i * 0.15 }} viewport={{ once: false }}>
             {renderItem(item, i)}
           </motion.div>
         ))}
