@@ -298,7 +298,7 @@ export default function Portfolio() {
                     >
                     {/* Front */}
                     <div 
-  className="flip-card-front bg-gray-900 text-white rounded shadow flex flex-col justify-center p-6 h-full relative"
+  className="flip-card-front bg-gray-900 text-white rounded shadow flex flex-col justify-center p-6 h-full"
 >
   {/* Data in alto a sinistra */}
   <span className="absolute top-4 left-4 text-sm font-semibold text-gray-300 bg-gray-700 px-2 py-1 rounded">
@@ -324,7 +324,7 @@ export default function Portfolio() {
 </div>
                     {/* Back */}
                     <div 
-                      className="flip-card-back bg-gray-900 text-white rounded shadow p-6 flex flex-col items-center justify-center h-full relative"
+                      className="flip-card-back bg-gray-900 text-white rounded shadow p-6 flex flex-col items-center justify-center h-full"
                     >
                       <p className="mb-2 text-center text-md">{exp.info}</p>
                       <p className="mt-2">{exp.description}</p>
