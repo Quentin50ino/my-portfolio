@@ -316,7 +316,7 @@ export default function Portfolio() {
   <img src={exp.logo} alt={exp.company} height={72} width={72} className="w-18 h-18 mb-4 rounded-full bg-white" />
   <h3 className="text-xl md:text-2xl font-bold">{exp.title} @ {exp.company}</h3>
   <p>{exp.location}</p>
-  <button
+  {!flippedStates[i] && <button
     className="absolute bottom-4 right-4 bg-gray-700 rounded-full p-2 hover:bg-gray-500 transition "
     onClick={() => {
       const newFlippedState = [...flippedStates];
@@ -326,10 +326,10 @@ export default function Portfolio() {
     aria-label="Gira la card"
     style={{ zIndex: 2 }}
   >
-    {!flippedStates[i] && <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 rotate-180">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 rotate-180">
       <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-    </svg>}
-  </button>
+    </svg>
+  </button>}
 </div>
                     {/* Back */}
                     <div 
@@ -340,7 +340,7 @@ export default function Portfolio() {
                       <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline mt-2 text-md mb-4">
                         Learn more
                       </a>
-                      <button
+                      {!!flippedStates[i] && <button
                         className="absolute bottom-4 right-4 bg-gray-700 rounded-full p-2 hover:bg-gray-500 transition"
                         onClick={() => {
                           const newFlippedState = [...flippedStates];
@@ -350,10 +350,10 @@ export default function Portfolio() {
                         aria-label="Torna indietro"
                         style={{ zIndex: 2 }}
                       >
-                        {!!flippedStates[i] && <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                        </svg>}
-                      </button>
+                        </svg>
+                      </button>}
                     </div>
                   </div>
                 </div>
