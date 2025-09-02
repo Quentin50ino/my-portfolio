@@ -9,6 +9,12 @@ import { Menu } from "lucide-react";
 import './App.css';
 
 const avatarUrl = "/assets/avatar.png";
+const ascomLogo = "/assets/ascom.jpg";
+const enelLogo = "/assets/enel.png";
+const accentureLogo = "/assets/accenture.png";
+const cesinLogo = "/assets/cesin.png";
+const polimiLogo = "/assets/polimi.png";
+const politoLogo = "/assets/polito.jpg";
 
 const colabIcon = (
   <img
@@ -26,7 +32,7 @@ const experiences = [
     duration: "May 2024 - Present",
     location: "Florence, Italy",
     description: "Development and maintenance of advanced medical software as part of the R&D team.",
-    logo: "https://yt3.googleusercontent.com/ytc/AIdro_mRCdUCB1m-OGujSGutSvcXsXvD0t3Mzq7m78eOZeyJ51s=s900-c-k-c0x00ffffff-no-rj",
+    logo: ascomLogo,
     info: "Ascom is a global solutions provider focused on healthcare ICT and mobile workflow solutions.",
     website: "https://www.ascom.com/",
     isFlipped: false
@@ -37,7 +43,7 @@ const experiences = [
     duration: "Nov 2022 - May 2024",
     location: "Turin, Italy",
     description: "Web and mobile software solutions development for business operations.",
-    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI1RyRInwJRuFRqiXqKT7C8mVlEXMYDcmLkw&s",
+    logo: enelLogo,
     info: "Enel is a multinational energy company and one of the world's leading integrated electricity and gas operators.",
     website: "https://www.enel.com/",
     isFlipped: false
@@ -48,7 +54,7 @@ const experiences = [
     duration: "Apr 2022 - Nov 2022",
     location: "Turin, Italy",
     description: "Agile team collaboration on web projects in the automotive sector.",
-    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ercDncGsEV9NkGdp78EyagH6U3ZFKiLyfQ&s",
+    logo: accentureLogo,
     info: "Accenture is a global professional services company with leading capabilities in digital, cloud and security.",
     website: "https://www.accenture.com/",
     isFlipped: false
@@ -59,7 +65,7 @@ const experiences = [
     duration: "Jan 2021 - Dec 2021",
     location: "Turin, Italy",
     description: "Developed web applications from scratch in a team of five.",
-    logo: "https://static.wixstatic.com/media/9cc025_0ab3b3121b3449b5b7d2a3c4c65f1cd6%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/9cc025_0ab3b3121b3449b5b7d2a3c4c65f1cd6%7Emv2.png",
+    logo: cesinLogo,
     info: "CESIN GROUP specializes in industrial automation and engineering solutions.",
     website: "https://www.cesingroup.it/",
     isFlipped: false
@@ -67,8 +73,8 @@ const experiences = [
 ];
 
 const education = [
-  { title: "Master's Degree in Computer Engineering", school: "Politecnico di Milano", track: "Music & Acoustics", location: "Milan, Italy" },
-  { title: "Bachelor's Degree in Computer Engineering", school: "Politecnico di Torino", track: "Cinema and Media Engineering", location: "Turin, Italy" },
+  { title: "Master's Degree in Computer Engineering", school: "Politecnico di Milano", track: "Music & Acoustics", location: "Milan, Italy", logo: polimiLogo },
+  { title: "Bachelor's Degree in Computer Engineering", school: "Politecnico di Torino", track: "Cinema and Media Engineering", location: "Turin, Italy", logo: politoLogo },
 ];
 
 const projects = [
@@ -129,6 +135,7 @@ export default function Portfolio() {
 
   return (
     <div className="text-lg w-full bg-gray-950 text-white">
+      {/*Backgorund floating icons - idea carina ma rende troppo pesante graficamente per il sito
       <div className="bg-icons">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
     className="bg-icon"
@@ -175,7 +182,7 @@ export default function Portfolio() {
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
     className="bg-icon"
     style={{ left: "20%", top: "60%", animationName: "float-yx", animationDelay: "0s" }} />
-</div>
+      </div>*/}
       {/* Navbar responsive */}
       <header className="bg-gray-900 py-6 px-10 flex justify-between items-center sticky top-0 z-50 shadow-md">
         <div className="text-xl font-bold">Alberto Bollino</div>
@@ -250,7 +257,8 @@ export default function Portfolio() {
             <p>
               Hi all, I'm Alberto Bollino. <br></br>
               I am a Software Engineer with a passion for creating innovative solutions. <br></br> 
-              I love dedicating myself to improving my coding skills through personal projects, while nurturing my passion for travel, cinema, art, personal finance, and music, as a blues and jazz guitarist, music has a special place in everything I do.
+              I love dedicating myself to improving my coding skills through personal projects, while nurturing my passion for travel, cinema, art, personal finance, and music. <br></br> 
+              As a blues and jazz guitarist, music has a special place in everything I do.
             </p>
           </motion.div>
         </section>
@@ -269,7 +277,8 @@ export default function Portfolio() {
                 className="h-full md:w-[60%] w-full"
               >
           <Card className="bg-gray-900 text-white h-full">
-            <Card.Body className="p-6 flex flex-col justify-between h-full">
+            <Card.Body className="p-6 flex flex-col justify-between h-full items-center">
+              <img src={edu.logo} alt={""} height={72} width={72} className="w-18 h-18 mb-4 rounded-full bg-white" />
               <h3 className="text-2xl font-bold">{edu.title}</h3>
               <p>{edu.school} - {edu.track}</p>
               <p>{edu.location}</p>
@@ -317,9 +326,9 @@ export default function Portfolio() {
     aria-label="Gira la card"
     style={{ zIndex: 2 }}
   >
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 rotate-180">
+    {!flippedStates[i] && <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 rotate-180">
       <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-    </svg>
+    </svg>}
   </button>
 </div>
                     {/* Back */}
@@ -341,9 +350,9 @@ export default function Portfolio() {
                         aria-label="Torna indietro"
                         style={{ zIndex: 2 }}
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                        {!!flippedStates[i] && <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                        </svg>
+                        </svg>}
                       </button>
                     </div>
                   </div>
